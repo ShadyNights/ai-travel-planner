@@ -1,0 +1,30 @@
+{
+  "id": 2,
+  "trip_id": 2,
+  "itinerary_text": "## Day 1: Exploring the Heart of Paris\n\n### Morning (9:00 AM - 12:00 PM)\n\n1. **Visit the Eiffel Tower**\n   - Venue: 5 Avenue Anatole France, 75007 Paris, France\n   - Phone: +33 8 92 68 30 83\n   - Time: 9:00 AM - 10:30 AM (1.5 hours)\n   - Cost: €17 (stairs to the top), €29 (elevator to the top)\n   - Transport: Metro Bir-Hakeim (Line 6) or RER C to Champ de Mars - Tour Eiffel\n   - Insider Tip: Buy tickets online in advance to skip the line. Consider visiting early in the morning for fewer tourists.\n   - Photo Opportunity: The Eiffel Tower offers breathtaking views of the city, especially during sunrise.\n\n2. **Breakfast at Café de Flore**\n   - Venue: 172 Boulevard Saint-Germain, 75006 Paris, France\n   - Phone: +33 1 45 48 55 26\n   - Time: 10:30 AM - 11:30 AM (1 hour)\n   - Cost: Approximately €15-€25 per person for breakfast\n   - Transport: A short walk from the Eiffel Tower or Metro Saint-Germain-des-Prés (Line 4)\n   - Insider Tip: Try their famous hot chocolate and enjoy the Parisian atmosphere.\n   - Cultural Etiquette: Greet the staff with a friendly \"Bonjour\" and don't forget to say \"Merci\" when leaving.\n\n### Afternoon (12:00 PM - 5:00 PM)\n\n1. **Lunch at Le Comptoir du Relais**\n   - Venue: 9 Carrefour de l'Odéon, 75006 Paris, France\n   - Phone: +33 1 46 33 00 01\n   - Time: 12:00 PM - 1:30 PM (1.5 hours)\n   - Cost: Approximately €20-€35 per person for lunch\n   - Transport: A short walk from Café de Flore or Metro Odéon (Lines 4 and 10)\n   - Insider Tip: This bistro offers classic French cuisine. Try their steak tartare.\n   - Weather Alternative: If it's raining, consider lunching here as it's indoors.\n\n2. **Visit the Musée d'Orsay**\n   - Venue: 1 Rue de la Légion d'Honneur, 75007 Paris, France\n   - Phone: +33 1 40 49 48 14\n   - Time: 2:00 PM - 4:00 PM (2 hours)\n   - Cost: €12 (permanent collections), free for those under 18\n   - Transport: Metro Solférino (Line 12) or RER C to Musée d'Orsay\n   - Insider Tip: The museum is home to an impressive collection of Impressionist and Post-Impressionist art. Don't miss Monet's water lilies.\n   - Photo Opportunity: The museum's grand hall and the artworks themselves offer great photo opportunities.\n\n### Evening (5:00 PM - 10:00 PM)\n\n1. **Dinner at Le Grand Vefour**\n   - Venue: 14 Rue de Beaujolais, 75001 Paris, France\n   - Phone: +33 1 42 60 40 20\n   - Time: 7:00 PM - 9:00 PM (2 hours)\n   - Cost: Approximately €40-€60 per person for dinner\n   - Transport: Metro Palais-Royal–Musée du Louvre (Lines 1 and 7) or a short taxi ride\n   - Insider Tip: This is one of Paris's oldest restaurants, offering refined French cuisine in a historic setting.\n   - Cultural Tip: When dining, keep your hands visible on the table, and don't start eating until everyone has been served.\n\n2. **Seine River Cruise**\n   - Venue: Departures from Pont Neuf or near the Eiffel Tower\n   - Phone: +33 8 25 05 69 95 (for Vedettes du Pont Neuf)\n   - Time: 9:00 PM - 10:00 PM (1 hour)\n   - Cost: Approximately €15-€20 per person\n   - Transport: Metro Pont Neuf (Line 4) for departures near Île de la Cité\n   - Insider Tip: A river cruise at night offers a magical view of Paris's landmarks illuminated.\n   - Photo Opportunity: Capture the city's beauty from a different perspective, especially the Eiffel Tower at night.\n\n### Additional Tips for Day 1:\n- **Language:** While many Parisians speak English, learning basic French phrases like \"Bonjour\" (hello), \"Merci\" (thank you), and \"Excusez-moi\" (excuse me) can enhance your experience.\n- **Transportation:** Consider purchasing a Paris Visite pass for unlimited travel on public transport. It also grants you entry to many attractions and can save you time and money.\n- **Safety:** Be mindful of your belongings, especially in crowded areas and tourist hotspots. Keep an eye on your bags and avoid displaying signs of wealth.\n\nThis itinerary provides a balanced mix of iconic landmarks, cultural experiences, and culinary delights, all within a moderate budget. Enjoy your day in Paris!",
+  "itinerary_json": null,
+  "word_count": 675,
+  "character_count": 3991,
+  "rating": 5,
+  "feedback_comments": "Amazing detail!",
+  "quality_score": 83.991,
+  "generated_by_model": "llama-3.3-70b-versatile",
+  "generation_time_ms": 0,
+  "used_for_training": false,
+  "training_cycle_id": null,
+  "created_at": "2025-12-02 13:32:58.096389",
+  "rated_at": "2025-12-02 13:33:14.707656",
+  "user_id": 1,
+  "destination": "paris",
+  "interests": [
+    "Museums",
+    "Food"
+  ],
+  "duration": 1,
+  "budget_level": "Moderate",
+  "travel_style": [
+    "Solo"
+  ],
+  "include_food": true,
+  "include_transport": true,
+  "updated_at": 
