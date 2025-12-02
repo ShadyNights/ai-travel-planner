@@ -1,0 +1,108 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: logstash-config
+  namespace: logging
+data:
+  logstash.conf: |
+    input {
+      beats {
+        port => 5044
+      }
+    }
+
+    filter {
+      # Parse JSON logs
+      if [message] =~ /^\{.*\}$/ {
+        json {
+          source => "message"
+          target => "parsed_json"
+        }
+      }
+
+      # Add Kubernetes metadata
+      if [kubernetes] {
+        mutate {
+          add_field => {
+            "k8s_namespace" => "%{[kubernetes][namespace]}"
+            "k8s_pod" => "%{[kubernetes][pod][name]}"
+            "k8s_container" => "%{[kubernetes][container][name]}"
+          }
+        }
+      }
+    }
+
+    output {
+      elasticsearch {
+        hosts => ["https://elasticsearch.logging.svc.cluster.local:9200"]
+        index => "filebeat-%{+YYYY.MM.dd}"
+        user => "elastic"
+        password => "changeme123"  # Match your secret
+        ssl => true
+        ssl_certificate_verification => false
+      }
+      
+      # Debug output (remove in production)
+      stdout {
+        codec => rubydebug
+      }
+    }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logstash
+  namespace: logging
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logstash
+  template:
+    metadata:
+      labels:
+        app: logstash
+    spec:
+      containers:
+      - name: logstash
+        image: docker.elastic.co/logstash/logstash:7.17.18
+        ports:
+        - containerPort: 5044
+          name: beats
+        - containerPort: 9600
+          name: metrics
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        volumeMounts:
+        - name: config-volume
+          mountPath: /usr/share/logstash/pipeline/logstash.conf
+          subPath: logstash.conf
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 9600
+          initialDelaySeconds: 60
+          periodSeconds: 10
+      volumes:
+      - name: config-volume
+        configMap:
+          name: logstash-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: logstash
+  namespace: logging
+spec:
+  selector:
+    app: logstash
+  ports:
+    - protocol: TCP
+      port: 5044
+      targetPort: 5044
+      name: beats
